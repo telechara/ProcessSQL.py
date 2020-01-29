@@ -41,35 +41,23 @@
    character sequence of "),(" since this is the INSERT row delimiter which
    is used to split the lines into readable SQL.
 
+   Will overwrite an existing destination file with a warning but without
+   asking. Code has no current known issues if args are observed correctly.
+   Large SQL files obviously take longer, but we're not buffering the whole
+   file to avoid consuming RAM.
+
 ### Revision History
-  Current Version = "v1.02.01"
-  Updated by: Tele
-        Date: 2019-08-16
-       Notes: Fixed syntax to be PEP-08 compliant (except for one line)
+  Current Version: v1.02.01
+  Date: 2020-01-29
+  Notes: Fixed syntax to be PEP-08 compliant (except for one line)
+         Various wording/small cosmetics and optimisations
 
-  *** Previous Changes ***
-  Updated by: Tele
-        Date: 2019-05-31
-       Notes: Fixed some filenames vs file handles. Created backward
-              compatible version ye olde Python 2.4.3
 
-  Updated by: Tele
-        Date: 2019-05-15
-       Notes: Reworded help message to say 'tables to exclude' & added usage
-
-     Version: v1.00.00
-  Updated by: Tele
-        Date: 2019-04-12
-       Notes: Will overwrite an existing destination file with a warning but
-              without asking. Code has no current known issues if args are
-              observed correctly. Large SQL files obviously take longer, but
-              we're not buffering the whole file to avoid consuming RAM.
-              Added this header/documentation and some comments in code.
-
-     Version: v0.01.00 beta
+  Version: v1.01.00 beta
   Updated by: Tele
         Date: 2019-03-05
        Notes: Converted from Bash to Python for cross-compatibility with
               Windows, Linux, etc. Previously built on CygWin but not
               everyone has that installed. Python is easier to install
               and maintain on Windows. Script is easier to read.
+
